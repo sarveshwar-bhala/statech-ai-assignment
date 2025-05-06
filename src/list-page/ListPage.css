@@ -1,0 +1,66 @@
+.listPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.listTile {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 10px;
+  width: 50%;
+  height: 100px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: solid 1px gray;
+  background-color: white;
+}
+.search {
+  padding: 5px 10px;
+  margin: 0px 0px 10px 0px;
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  border: solid 1px gray;
+  background-color: white;
+  color: black;
+}
+.listPageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.listTileGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px gray;
+  background-color: white;
+  transition: transform 0.2s ease-in-out; 
+}
+.title {
+  color: black;
+  font-size: large;
+  font-weight: 800;
+  line-height:0px;
+}
+.titleGrid {
+  color: black;
+  font-size: large;
+  font-weight: 800;
+  line-height:20px;
+}
+.description {
+  color: black;
+  font-size: small;
+  font-weight: 500;
+}
