@@ -1,0 +1,32 @@
+.switch-container {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.switch {
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #ccc;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.switch.on {
+  background-color: #4caf50;
+}
+
+.switch-circle {
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s;
+}
+
+.switch.on .switch-circle {
+  left: 26px;
+}

@@ -4,6 +4,7 @@ import { getPosts } from "./apiCall";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../store/responseDataSlice";
 import { useNavigate } from "react-router-dom";
+import SwitchButton from "../switchButton/SwitchButton";
 
 function ListPage() {
   const items = useSelector((state) => state.items.data);
@@ -31,15 +32,15 @@ function ListPage() {
   return items.length === 0 ? (
     <div className="listPage">Loading.....</div>
   ) : (
-    <div>
-      <div>
+    <div className="listPageDiv">
+      <div className="searchDiv">
         <input
           type="text"
           placeholder="Search using title..."
           onChange={(e) => setSearch(e.target.value)}
           className="search"
                   />
-                  
+                  <SwitchButton isSwitchOn={isGrid} setSwitch={setIsGrid}/>
       </div>
       <div className={isGrid ? "listPageGrid" : "listPage"}>
         {searchItem.map((e) =>

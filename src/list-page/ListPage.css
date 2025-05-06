@@ -1,3 +1,10 @@
+.listPageDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
 .listPage {
   display: flex;
   flex-direction: column;
@@ -21,7 +28,7 @@
 .search {
   padding: 5px 10px;
   margin: 0px 0px 10px 0px;
-  width: 50%;
+  width: 100%;
   height: 40px;
   border-radius: 10px;
   border: solid 1px gray;
@@ -63,4 +70,14 @@
   color: black;
   font-size: small;
   font-weight: 500;
+}
+
+.searchDiv{
+    width: 51%;
+    display: flex;
+    align-items: center;
+    justify-items:flex-start;
+    gap:20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
