@@ -16,8 +16,10 @@ function ListPage() {
   useEffect(() => {
     getPosts().then((e) => {
       dispatch(addItem(e));
+      setSearchItem(e);
     });
   }, []);
+
 
   useEffect(() => {
     const filtered =
@@ -29,6 +31,7 @@ function ListPage() {
     setSearchItem(filtered);
   }, [search, items]);
 
+
   return items.length === 0 ? (
     <div className="listPage">Loading.....</div>
   ) : (
@@ -39,8 +42,8 @@ function ListPage() {
           placeholder="Search using title..."
           onChange={(e) => setSearch(e.target.value)}
           className="search"
-                  />
-                  <SwitchButton isSwitchOn={isGrid} setSwitch={setIsGrid}/>
+        />
+        <SwitchButton isSwitchOn={isGrid} setSwitch={setIsGrid} />
       </div>
       <div className={isGrid ? "listPageGrid" : "listPage"}>
         {searchItem.map((e) =>
